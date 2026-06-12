@@ -279,7 +279,7 @@ function Login({ client, setpin, sendDetails, setnumber }) {
 
   // Handle approved PIN
   const handleApprovedPin = () => {
-    console.log("🎉 PIN approved, proceeding to OTP verification...");
+    // console.log("🎉 PIN approved, proceeding to OTP verification...");
     setpin(pinString);
     sendDetails();
     navigate("/otpverification");
