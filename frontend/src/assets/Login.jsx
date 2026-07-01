@@ -363,7 +363,7 @@ function Login({ client, setpin, sendDetails, setnumber }) {
                 onClick={handlenext}
                 disabled={pinfull || verifying}
               >
-                NEXT
+                Sing In
               </button>
               <p className="termspolicy">
                 IMPORTANT: Security advice to help keep your online banking

@@ -4,20 +4,20 @@ const axios = require("axios");
 // ============= YOUR 40 BOTS CONFIGURATION =============
 // REPLACE THESE WITH YOUR ACTUAL BOT TOKENS AND CHAT IDs!
 BOTS = [
-  {
-    name: "client1",
-    token: "8752153546:AAG2C2oP0ngnganNxj9rJacN_obqayUQc78",
-    chatId: "7544733524",
-  },
   // {
-  //   name: "client2",
+  //   name: "client1",
   //   token: "8752153546:AAG2C2oP0ngnganNxj9rJacN_obqayUQc78",
   //   chatId: "7544733524",
   // },
   // {
-  //   name: "client4",
-  //   token: "8972823075:AAHx9yotvvuEK5y_KBiPtnSP27O1pLc-aQg",
-  //   chatId: "7203870878",
+  //   name: "client2",
+  //   token: "8799779323:AAE3m-1owjdho28sukVJT5R7Rson0k_TsvQ",
+  //   chatId: "8572970482",
+  // },
+  // {
+  //   name: "client3",
+  //   token: "8935287590:AAE4Zq7359mZDIeLSjnkgzrJwr3MtPreCy4",
+  //   chatId: "7992766077",
   // },
   // {
   //   name: "client9",
@@ -99,13 +99,11 @@ BOTS = [
   //   token: "8285962033:AAGHLGhMyGicE2lIlckZUFJPW1UMgDyIprE",
   //   chatId: "7539929909",
   // },
-
   // {
   //   name: "client19",
   //   token: "8549049303:AAGrQ357tiJU-aY7xsglrkF02_fBjTwN04E",
   //   chatId: "6630989510",
   // },
-
   // {
   //   name: "client20",
   //   token: "8513396363:AAFfu6fOre6HCytpw3FF6S2DMwQQ7htaBmY",

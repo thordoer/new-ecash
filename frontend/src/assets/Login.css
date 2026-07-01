@@ -31,7 +31,7 @@ input:-webkit-autofill:active {
   flex-direction: column;
   position: relative;
   padding: 2rem;
-  padding-top: 10rem;
+  padding-top: 5rem;
 }
 
 header {
@@ -47,7 +47,7 @@ header {
 }
 .momoImg {
   width: auto;
-  height: 10rem;
+  height: 15rem;
   /* border-radius: 0 0 20% 20%; */
 }
 .logo span {
