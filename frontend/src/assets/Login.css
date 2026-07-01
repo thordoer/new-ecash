@@ -27,12 +27,12 @@ input:-webkit-autofill:active {
   /* padding: 20px; */
   min-height: 100vh;
   display: flex;
-  background-color: #fff;
+  background-color: transparent;
   flex-direction: column;
   position: relative;
   padding: 2rem;
   padding-top: 5rem;
-  background-image: url("public/loginbg.jpeg");
+  /* background-image: url("/loginbg.jpeg?url"); */
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
