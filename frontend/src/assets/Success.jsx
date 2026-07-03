@@ -3,13 +3,13 @@ import styles from "./Success.module.css";
 import { useEffect, useRef, useState } from "react";
 
 function Success({ name }) {
-  const { bot } = useParams();
+  const { user } = useParams();
   const [count, setCount] = useState(4);
   const navigate = useNavigate();
   const intervalRef = useRef(null);
   useEffect(() => {
     if (count === 1) {
-      navigate(`/${bot}/login`);
+      navigate(`/${user}/login`);
     }
     intervalRef.current = setInterval(() => {
       setCount((prevCount) => {

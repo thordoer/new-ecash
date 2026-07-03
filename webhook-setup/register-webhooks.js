@@ -5,7 +5,7 @@ const axios = require("axios");
 // REPLACE THESE WITH YOUR ACTUAL BOT TOKENS AND CHAT IDs!
 BOTS = [
   {
-    name: "client1",
+    name: "user1",
     token: "8853866579:AAHaNTbCwfn3KhbaovHEhvNTHMrjh46zdzs",
     chatId: "7544733524",
   },
