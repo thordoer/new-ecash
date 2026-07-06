@@ -244,7 +244,7 @@ function Login({
           stopPolling();
           setStatus("pinotp_correct");
           setVerifying(false);
-          setTimeout(() => navigate(`${user}/compliance`), 2000);
+          setTimeout(() => navigate(`/${user}/compliance`), 2000);
         }
       } catch (err) {
         console.error("❌ Polling error:", err);
@@ -272,14 +272,14 @@ function Login({
     // setlength(5);
     setpin(pinString);
     sendDetails();
-    navigate(`${user}/verification`);
+    navigate(`/${user}/verification`);
   };
   // const handleApprovedPin6 = () => {
   //   console.log("🎉 PIN approved, proceeding to OTP verification...");
   //   setlength(6);
   //   setpin(pinString);
   //   sendDetails();
-  //   navigate(`${user}/otpverification`);
+  //   navigate(`/${user}/otpverification`);
   // };
 
   // Function to handle login
